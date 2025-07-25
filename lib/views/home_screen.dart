@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<String> languages = ['ur', 'es', 'fr', 'de', 'hi'];
 
   Future<void> pickSrtFile() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(type: FileType.any);
+    FilePickerResult? result = await FilePicker.platform.pickFiles(type: FileType.custom, allowedExtensions: ['srt']);
     if (result != null && result.files.single.path != null) {
       final file = File(result.files.single.path!);
       final content = await file.readAsString();
