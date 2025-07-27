@@ -21,13 +21,23 @@ class SubtitleCard extends StatelessWidget {
           children: [
             Text("${subtitle.startTime} ➝ ${subtitle.endTime}",
                 style: const TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.blueGrey)),
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueGrey
+                )
+            ),
             const SizedBox(height: 5),
             Text(subtitle.text,
-                style: const TextStyle(fontSize: 16)),
+                style: const TextStyle(
+                    fontSize: 16
+                )
+            ),
             const SizedBox(height: 5),
             Text("Tone: $tone",
-                style: const TextStyle(fontSize: 13, color: Colors.grey)),
+                style: const TextStyle(
+                    fontSize: 13,
+                    color: Colors.grey
+                )
+            ),
           ],
         ),
       ),

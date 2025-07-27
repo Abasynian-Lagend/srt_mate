@@ -4,5 +4,9 @@ class Subtitle {
   final String endTime;
   final String text;
 
-  Subtitle(this.index, this.startTime, this.endTime, this.text);
+  Subtitle(
+      this.index,
+      this.startTime,
+      this.endTime,
+      this.text);
 }

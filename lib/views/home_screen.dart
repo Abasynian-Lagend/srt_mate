@@ -124,7 +124,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("SRTMate - AI Subtitle Viewer"),
+        title: const Text("SRT File Viewer",
+          style: TextStyle(
+              color: Colors.white
+          ),
+        ),
         backgroundColor: Colors.indigo,
         actions: [
           if (currentFilename != null)
@@ -198,7 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    "📄 Summary",
+                    "Summary",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 6),

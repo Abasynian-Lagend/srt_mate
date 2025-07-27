@@ -41,7 +41,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
             subtitle: Text("${entry.date} • ${fileExists ? 'Available' : 'Missing'}"),
             leading: const Icon(Icons.history),
             trailing: fileExists
-                ? const Icon(Icons.arrow_forward_ios, size: 16)
+                ? const Icon(Icons.arrow_forward, size: 16)
                 : const Icon(Icons.warning, size: 16, color: Colors.red),
             onTap: () {
               if (fileExists) {

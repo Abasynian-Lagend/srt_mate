@@ -49,7 +49,13 @@ class HistoryService {
     }
 
     final now = DateTime.now();
-    final formattedDate = "${now.year}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}";
+    final formattedDate = "${now.year}-"
+        "${now.month
+        .toString()
+        .padLeft(2, '0')}-"
+        "${now.day
+        .toString()
+        .padLeft(2, '0')}";
 
     final newEntry = HistoryEntry(
       filename: filename,
@@ -57,9 +63,11 @@ class HistoryService {
       date: formattedDate,
     );
 
-    // Remove duplicates by file path
-    entries.removeWhere((entry) => entry.filePath == filePath);
-    entries.insert(0, newEntry); // insert latest at top
+    entries
+        .removeWhere((entry) => entry
+        .filePath == filePath);
+    entries
+        .insert(0, newEntry);
 
     await historyFile.writeAsString(jsonEncode(entries));
   }

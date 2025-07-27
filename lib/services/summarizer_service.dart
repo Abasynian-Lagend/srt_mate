@@ -11,8 +11,9 @@ class SummarizerService {
     }
 
     final topWords = freq.entries.toList()
-      ..sort((a,b) =>
-          b.value.compareTo(a.value));
+      ..sort((a,b) => b.value
+          .compareTo(a.value)
+      );
 
     final keywords = topWords
         .take(5)
